@@ -1,0 +1,169 @@
+.navigation {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 5;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  background-color: var(--main-bcg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transform: translateX(-150%);
+  opacity: 0;
+  visibility: hidden;
+  overflow: auto;
+  transition: transform 250ms ease, opacity 250ms ease, visibility 250ms ease;
+}
+
+.navigation::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background-image: url('/images/header/bcg1.png');
+  background-repeat: no-repeat;
+  background-position: center top 16px;
+}
+
+.header-logo {
+  font-family: 'Impact', sans-serif;
+  padding: 20px 0;
+  z-index: 10;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--main-cl);
+}
+
+.header-logo-span {
+  color: #00b068;
+}
+
+.menu-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.toggle-main {
+  z-index: 15;
+  margin-left: 20px;
+}
+
+.nav-item:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.nav-link {
+  transition: color var(--time) var(--cubic);
+}
+
+.nav-link:hover,
+.nav-list:focus {
+  color: var(--accent-cl);
+}
+
+.burger.is-open ~ .nav-container .navigation {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+.burger {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  width: 26px;
+  height: 16px;
+  z-index: 10;
+  cursor: pointer;
+  padding: 32px 0;
+}
+
+.burger-icon,
+.burger-icon::before,
+.burger-icon::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--main-cl);
+}
+
+.burger-icon {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.burger-icon::before {
+  top: -6px;
+}
+
+.burger-icon::after {
+  top: 6px;
+}
+
+.burger.is-open .burger-icon {
+  background-color: transparent;
+}
+
+.burger.is-open .burger-icon::before {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.burger.is-open .burger-icon::after {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+@media screen and (min-width: 768px) {
+  .burger {
+    display: none;
+  }
+
+  .navigation {
+    position: static;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    display: block;
+    visibility: visible;
+    background-color: transparent;
+    transform: translate(0);
+  }
+
+  .nav-container {
+    display: flex;
+    gap: 40px;
+  }
+
+  .toggle-main {
+    margin-left: auto;
+    margin-right: 40px;
+  }
+
+  .nav-list {
+    display: flex;
+    justify-content: flex-end;
+    gap: 40px;
+  }
+
+  .nav-item:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  .header-logo {
+    padding: 36px 0;
+  }
+
+  .nav-link {
+    padding: 36px 0;
+  }
+}

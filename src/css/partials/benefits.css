@@ -1,0 +1,140 @@
+.benefits {
+  padding-bottom: 80px;
+  
+}
+
+.title-benefits {
+  font-family: 'Impact', sans-serif;
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 1.23;
+  text-transform: uppercase;
+  color: var(--accent-cl);
+  margin-bottom: 40px;
+}
+
+.title-benefits-spam {
+  color: var(--main-cl);
+}
+
+.benefits-item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.container-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  background-color: var(--second-bcg);
+}
+
+.benefits-icon {
+  stroke: var(--accent-cl);
+  fill: none;
+}
+
+.subtitle-benefits {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.55;
+  text-transform: uppercase;
+  color: var(--main-cl);
+  margin-bottom: 16px;
+}
+
+.benefits-text {
+  line-height: 1.5;
+  color: var(--main-cl);
+}
+
+@media only screen and (min-width: 768px) {
+  .title-benefits {
+    font-size: 108px;
+    line-height: 1.15;
+    margin-bottom: -36px;
+  }
+
+  .benefits-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .benefits-item {
+    width: calc((100% - 20px) / 2);
+    text-align: left;
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  .benefits-item:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  .benefits-item:first-child {
+    width: 100%;
+    margin-left: calc((100% - 20px) / 2);
+  }
+
+  .subtitle-benefits {
+    font-size: 20px;
+    color: var(--main-cl);
+    text-transform: uppercase;
+  }
+
+  .benefits-text {
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--main-cl);
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .title-benefits {
+    font-size: 108px;
+    line-height: 1.15;
+    width: 681px;
+    padding-top: 164px;
+    margin-bottom: -110px;
+    
+  }
+
+  .benefits-list {
+    gap: 32px;
+    
+  }
+
+  .benefits-item {
+     width: calc((100% - 64px) / 3);
+  }
+
+  .benefits-item:first-child {
+    width: 100%;
+    margin-left: calc((100% - 64px) / 1.4);
+  }
+
+  .subtitle-benefits {
+    font-size: 20px;
+    color: var(--main-cl);
+    text-transform: uppercase;
+  }
+
+  .benefits-text {
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--main-cl);
+  }
+
+  .benefits-container {
+    background-image: url('/images/benefits/decor-bg-3-min.png');
+    background-repeat: no-repeat;
+    background-position: top 48px right;
+    background-size: 526px 408px;
+   
+  }
+
+}

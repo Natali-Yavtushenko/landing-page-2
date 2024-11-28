@@ -1,0 +1,31 @@
+.scroll-to-top {
+  position: fixed;
+  z-index: 20;
+  bottom: 60px;
+  right: 5%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: none;
+  color: #f0f0f0;
+  cursor: pointer;
+  border-radius: 100%;
+  background-color: var(--accent-cl);
+
+  transition: opacity var(--time) var(--cubic),
+    transform var(--time) var(--cubic);
+}
+
+.scroll-to-top:hover,
+.scroll-to-top:focus {
+  transform: scale(1.1);
+}
+
+.js-transparent {
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.9);
+}

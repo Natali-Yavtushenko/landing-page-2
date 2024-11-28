@@ -1,0 +1,250 @@
+.collaboration-container {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.green-collorText {
+  color: var(--accent-cl);
+}
+
+.collaboration-title {
+  font-family: 'Impact', sans-serif;
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 1.23;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.collaboration-text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  text-transform: uppercase;
+  text-align: left;
+  margin-bottom: 32px;
+}
+
+.contacts-block {
+  font-style: normal;
+  margin-bottom: 40px;
+}
+
+.contacts-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+
+.contacts {
+  display: flex;
+  gap: 16px;
+  outline: none;
+  transition: color var(--time) var(--cubic);
+}
+
+.contacts:hover,
+.contacts:focus {
+  color: var(--accent-cl);
+}
+
+.item-icon {
+  fill: none;
+  stroke: var(--accent-cl);
+}
+
+.email-confirm {
+  margin-bottom: 32px;
+  color: var(--error-cl);
+}
+
+.invalid-email.is-hidden-text {
+  display: none;
+}
+
+.form-input {
+  border-radius: 8px;
+  padding-left: 16px;
+  width: 100%;
+  height: 48px;
+  margin-bottom: 32px;
+  color: var(--main-cl);
+  background-color: var(--third-bcg);
+  outline: 0.2px solid transparent;
+  border-color: transparent;
+  cursor: pointer;
+  transition: outline-color var(--time) var(--cubic);
+}
+
+.form-input:hover,
+.form-input:focus-within {
+  outline-color: var(--accent-cl);
+}
+
+.input-form {
+  position: relative;
+}
+
+.done-icon {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  fill: var(--accent-cl);
+}
+
+.done-icon.is-hidden {
+  display: none;
+}
+
+.invalid-email {
+  position: absolute;
+  bottom: 15px;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 1.3;
+  letter-spacing: 0.04em;
+}
+
+.textela-input {
+  border-radius: 8px;
+  padding-left: 16px;
+  padding-top: 16px;
+  width: 100%;
+  height: 128px;
+  outline: 0.2px solid transparent;
+  border-color: transparent;
+  color: var(--main-cl);
+  background-color: var(--third-bcg);
+  cursor: pointer;
+  resize: none;
+  transition: outline-color var(--time) var(--cubic);
+}
+
+.textela-input:hover,
+.textela-input:focus-within {
+  outline-color: var(--accent-cl);
+}
+
+.send-button {
+  display: block;
+  border-radius: 8px;
+  padding: 12px;
+  width: 100%;
+  height: 48px;
+  background-color: var(--accent-cl);
+  color: #f0f0f0;
+  font-family: Poppins Medium, sans-serif;
+  font-weight: 500;
+  text-align: center;
+  border-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: background-color var(--time) var(--cubic);
+}
+
+.send-button:hover,
+.send-button:focus {
+  background-color: #009156;
+}
+
+@media screen and (min-width: 768px) {
+  .collaboration-container {
+    padding-top: 124px;
+    padding-bottom: 124px;
+    background-image: url('/images/collaboration/decor.png');
+    background-repeat: no-repeat;
+    background-position: right 32px top 13px;
+    background-size: 336px 260px;
+  }
+
+  .collaboration-title {
+    font-size: 108px;
+    line-height: 1.15;
+    letter-spacing: 0.02em;
+    margin-bottom: 60px;
+  }
+
+  .collaboration-text {
+    font-size: 20px;
+    line-height: 1.6;
+    width: 500px;
+    margin-bottom: 32px;
+  }
+
+  .contacts-list {
+    flex-direction: row;
+    margin-bottom: 60px;
+    column-gap: 16px;
+  }
+
+  .form-input {
+    max-width: 704px;
+  }
+
+  .contacts-list {
+    flex-direction: row;
+    margin-bottom: 60px;
+    column-gap: 16px;
+  }
+
+  .form-input {
+    max-width: 704px;
+  }
+
+  .textela-input {
+    max-width: 704px;
+  }
+
+  .send-button {
+    max-width: 173px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .collaboration-container {
+    padding-top: 164px;
+    padding-bottom: 164px;
+    background-image: url('/images/collaboration/decor-desk.png');
+    background-repeat: no-repeat;
+    background-position: right 32px top 48px;
+    background-size: 526px 408px;
+  }
+
+  .collaboration-title {
+    width: 600px;
+    margin-bottom: 80px;
+  }
+
+  .collaboration-text {
+    margin-bottom: 120px;
+  }
+
+  .contacts-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+  }
+
+  .collab-wall {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .form-input {
+    width: 592px;
+  }
+
+  .collab-wall {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .form-input {
+    width: 592px;
+  }
+
+  .textela-input {
+    width: 592px;
+  }
+}

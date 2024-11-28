@@ -1,0 +1,237 @@
+.section-projects {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.projects-title {
+  font-family: 'Impact', sans-serif;
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 1.23;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.projects-title_next {
+  color: var(--accent-cl);
+}
+
+.projects-list_img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+  margin: 0 auto 40px;
+}
+
+.projects-img {
+  border-radius: 16px;
+  margin-bottom: 12px;
+}
+
+.projects-img_title {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.projects-blok_descr {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.projects-box_descr {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.projects-button_link {
+  align-self: flex-end;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 8px;
+  border: none;
+  padding: 12px 24px;
+  width: 125px;
+  height: 48px;
+  background-color: var(--third-bcg);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all var(--time) var(--cubic);
+}
+
+.projects-button_link:hover,
+.projects-button_link:focus {
+  background-color: var(--hover);
+}
+
+.projects-button_text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  color: var(--main-cl, var(--main-bcg));
+  margin-right: 12px;
+}
+
+.projects-button_icon {
+  stroke: var(--accent-cl);
+}
+
+.projects-button_loading {
+  position: relative;
+  display: block;
+  text-align: center;
+  border: none;
+  padding: 12px 24px;
+  min-width: 154px;
+  height: 52px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.55;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--main-cl, var(--main-bcg));
+  background-color: var(--main-bcg, var(--main-cl));
+  margin: auto;
+  transition: all var(--time) var(--cubic);
+}
+
+.projects-button_loading:hover,
+.projects-button_loading:focus {
+  color: var(--accent-cl);
+}
+
+.projects-button_loading::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 106px;
+  height: 2px;
+  background-color: var(--accent-cl);
+}
+
+@media only screen and (min-width: 768px) {
+  .section-projects {
+    padding-top: 124px;
+    padding-bottom: 124px;
+  }
+
+  .projects-title {
+    font-size: 108px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    margin-bottom: 60px;
+    text-align: center;
+  }
+
+  .projects-list_img {
+    gap: 60px;
+    margin-bottom: 60px;
+  }
+
+  .projects-img {
+    border-radius: 24px;
+    max-width: 704px;
+    margin-bottom: 16px;
+  }
+
+  .projects-img_title {
+    font-size: 36px;
+    line-height: 1.33;
+    letter-spacing: 0.01em;
+    margin-bottom: 0px;
+  }
+
+  .projects-blok_descr {
+    gap: 20px;
+  }
+
+  .projects-box_descr {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .projects-button_loading {
+    min-width: 165px;
+    height: 56px;
+  }
+
+  .projects-button_loading {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+  }
+
+  .projects-button_loading::after {
+    width: 119px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .section-projects {
+    padding-top: 164px;
+    padding-bottom: 0;
+  }
+
+  .projects-list_img {
+    max-width: 1008px;
+    gap: 80px;
+    margin-bottom: 80px;
+  }
+
+  .projects-title {
+    margin-bottom: 80px;
+  }
+
+  .projects-img {
+    max-width: 1008px;
+  }
+}
+
+.box-loader {
+  position: relative;
+  display: none;
+}
+
+.loader {
+  width: 20px;
+  aspect-ratio: 1;
+  animation: l13-0 2s linear infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.loader::before,
+.loader::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(at 30% 30%, #0000, #000a) red;
+  animation: l13-1 0.5s cubic-bezier(0.5, -500, 0.5, 500) infinite;
+}
+.loader::after {
+  animation-delay: -0.15s;
+}
+@keyframes l13-0 {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes l13-1 {
+  100% {
+    transform: translate(0.5px);
+  }
+}
