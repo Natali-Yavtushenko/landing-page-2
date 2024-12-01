@@ -1,4 +1,5 @@
- .faq-title {
+
+.faq-title {
     font-family: "Impact", sans-serif;
     text-align: start;
     font-size: 2rem;
@@ -149,6 +150,7 @@ padding-right: 100px;
     .faq-content{
       display: flex;
       flex-direction: row;
+      
     }
     
     .faq-content {
@@ -168,7 +170,7 @@ padding-right: 100px;
       justify-content: space-between;
     }
 
-    .faq {
+    .faq-content {
         position: relative;
         background-image: url('/images/questions/decor-bg-4-min.png'); 
         background-size: contain;
